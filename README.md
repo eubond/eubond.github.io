@@ -9,4 +9,4 @@ Portifólio desenvolvido durante os estudos de mentoria do projeto [training-cen
 ## Links
 * [Facebook](https://www.facebook.com/flipmedeiros)
 * [Twitter](http://twitter.com/flipmedeiros)
-* [LinkedIn](https://www.linkedin.com/in/felipe-medeiros-a3574)
+* [LinkedIn](https://www.linkedin.com/in/felipe-medeiros-a3574731)
