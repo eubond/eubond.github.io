@@ -1,6 +1,6 @@
 # Felipe Medeiros
 
-Portifólio desenvolvido durante os estudos de mentoria do projeto training-center, tendo como objetivo:
+Portifólio desenvolvido durante os estudos de mentoria do projeto [training-center](https://github.com/training-center), tendo como objetivo:
 
 Melhorar o conhecimento para desenvolvimento de produtos
 Melhorar a concepção de UX
