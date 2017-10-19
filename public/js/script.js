@@ -1,0 +1,1 @@
+var x,y,z;z=(x=9)+(y=6),document.getElementById("demo").innerHTML=z;
