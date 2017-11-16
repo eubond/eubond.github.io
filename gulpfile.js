@@ -3,8 +3,15 @@ var cleanCSS = require('gulp-clean-css');
 var stylus = require('gulp-stylus');
 var uglify = require('gulp-uglify');
 var imagemin = require ('gulp-imagemin')
+var htmlmin = require("gulp-htmlmin");
 var browserSync = require('browser-sync').create();
 
+
+gulp.task('html', function() {
+  return gulp.src("./*.html")
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('./public'));
+})
 gulp.task('css', function() {
   return gulp.src('./src/stylus/**/*.styl')
     .pipe(stylus())
@@ -12,9 +19,13 @@ gulp.task('css', function() {
     .pipe(gulp.dest( './src/css'))
     .pipe(browserSync.stream());
 });
-
-
-
+gulp.task("css-build", function() {
+  return gulp
+    .src("./src/stylus/**/*.styl")
+    .pipe(stylus())
+    .pipe(cleanCSS())
+    .pipe(gulp.dest("./public/css"))
+});
 
 gulp.task('js', function() {
   return gulp.src('./src/js/**/*.js')
@@ -29,14 +40,7 @@ gulp.task('imagemin', function(){
     .pipe(gulp.dest('./public/img'))
 });
 
-  
-gulp.task( 'default', function() {
-  gulp.watch( './src/stylus/**/*.styl', ['css'] );
-  gulp.watch( './src/js/**/*.js', ['js'] );
-});
-
-
-// Static Server + watching scss/html files
+// Static Server + watching styl/js/html files
 gulp.task('serve', ['css', 'js' ], function() {
   
     browserSync.init({
@@ -44,8 +48,9 @@ gulp.task('serve', ['css', 'js' ], function() {
     });
 
     gulp.watch( './src/stylus/**/*.styl', ['css'] );
-    gulp.watch( './src/js/**/*.js', ['js'] );
+    gulp.watch( './src/js/**/*.js').on('change', browserSync.reload);
     gulp.watch("./*.html").on('change', browserSync.reload);
 });
+gulp.task('build',['css-build', 'js', 'imagemin', 'html'] )
   
  
