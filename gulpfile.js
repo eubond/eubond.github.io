@@ -7,11 +7,13 @@ var htmlmin = require("gulp-htmlmin");
 var browserSync = require('browser-sync').create();
 
 
+// Minifies HTML for build
 gulp.task('html', function() {
   return gulp.src("./*.html")
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('./public'));
 })
+// Compile .styl to .css and refresh browserSync
 gulp.task('css', function() {
   return gulp.src('./src/stylus/**/*.styl')
     .pipe(stylus())
@@ -19,6 +21,7 @@ gulp.task('css', function() {
     .pipe(gulp.dest( './src/css'))
     .pipe(browserSync.stream());
 });
+// Minifies css for build
 gulp.task("css-build", function() {
   return gulp
     .src("./src/stylus/**/*.styl")
@@ -27,6 +30,7 @@ gulp.task("css-build", function() {
     .pipe(gulp.dest("./public/css"))
 });
 
+// Minifies JS for build
 gulp.task('js', function() {
   return gulp.src('./src/js/**/*.js')
     .pipe(uglify())
@@ -34,6 +38,7 @@ gulp.task('js', function() {
     .pipe(browserSync.stream());
 });
 
+//Optimizes
 gulp.task('imagemin', function(){
   gulp.src('./src/img/**')
     .pipe(imagemin())
