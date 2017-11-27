@@ -1,7 +1,7 @@
 {
   "name": "eubond.io",
   "version": "1.0.0",
-  "description": "Portifólio desenvolvido durante os estudos de mentoria do projeto [training-center](https://github.com/training-center), tendo como objetivo:",
+  "description": "This portifolio is result of my mentoring project studies at [training-center](https://github.com/training-center)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
