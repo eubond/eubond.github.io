@@ -1,0 +1,34 @@
+{
+  "name": "eubond.io",
+  "version": "1.0.0",
+  "description": "This portifolio is result of my mentoring project studies at [training-center](https://github.com/training-center)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eubond/eubond.github.io.git"
+  },
+  "keywords": [
+    "portfolio",
+    "study"
+  ],
+  "author": "Felipe Medeiros",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eubond/eubond.github.io/issues"
+  },
+  "homepage": "https://github.com/eubond/eubond.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-stylint": "^4.0.0",
+    "gulp-stylus": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
+    "stylint": "^1.5.9"
+  }
+}
